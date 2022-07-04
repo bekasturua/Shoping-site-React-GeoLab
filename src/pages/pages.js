@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Page({ children }) {
   return (
     <>
@@ -15,15 +17,19 @@ export default function Page({ children }) {
             >
               <span className="navbar-toggler-icon" />
             </button>
-            <a className="navbar-brand" href="#">
+            <Link to="/" className="navbar-brand" href="#">
               Home
-            </a>
+            </Link>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <Link
+                    to="/product"
+                    className="nav-link active"
+                    aria-current="page"
+                  >
                     Products
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">
