@@ -8,8 +8,6 @@ export default function Home() {
     apiRequest("GET", "api/products")
   );
 
-  console.log(data);
-
   return (
     <Page>
       <div className="row row-cols-1 row-cols-md-3 g-4">
