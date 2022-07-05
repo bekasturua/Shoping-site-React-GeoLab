@@ -50,13 +50,15 @@ export default function Page({ children }) {
               </form>
             </div>
             <button type="button" className="btn btn-info">
-              Info
+              <i class="fa-solid fa-cart-shopping"></i> Cart
             </button>
           </div>
         </nav>
       </div>
 
       {children}
+
+      
     </>
   );
 }

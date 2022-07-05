@@ -22,7 +22,9 @@ export default function Product() {
             <h5 className="card-title">{data.title}</h5>
             <p className="card-text">{data.description}</p>
             <p className="card-text">${data.price}</p>
-            <button>Add to cart</button>
+            <button type="button" class="btn btn-success">
+              <i class="fa-solid fa-cart-arrow-down"></i> Add To Cart
+            </button>
           </div>
         </div>
       </div>

@@ -38,16 +38,14 @@
 }
 
 body {
-  margin: 30px;
-}
-
-.d-flex {
   margin: 5px;
 }
 
+
 .card {
+  margin: 5px;
   width: 30rem;
-  height: 30rem;
+  height: 40rem;
 }
 
 .card-home {
@@ -59,3 +57,4 @@ body {
   height: 200px;
   width: 200px;
 }
+

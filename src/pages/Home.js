@@ -24,7 +24,9 @@ export default function Home() {
                   <h5 className="card-title">{item.title}</h5>
                 </Link>
                 <p className="card-text">${item.price}</p>
-                <button>Add to cart</button>
+                <button type="button" class="btn btn-success">
+                  <i class="fa-solid fa-cart-arrow-down"></i> Add To Cart
+                </button>
               </div>
             </div>
           </div>
