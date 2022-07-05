@@ -13,16 +13,12 @@ export default function Home() {
     <Page>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {(data || []).map((item) => (
-          <div className="col">
+          <div className="col" key={item.id}>
             <div className="card h-100">
-              <img src="..." className="card-img-top" alt="..." />
+              <img src={item.image} className="card-img-top" alt="..." />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
+                <h5 className="card-title">{item.title}</h5>
+                <p className="card-text">${item.price}</p>
                 <button>Add to cart</button>
               </div>
             </div>
