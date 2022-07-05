@@ -2,14 +2,27 @@ import Page from "./pages";
 import { useQuery } from "react-query";
 import apiRequest from "../apiRequest";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Home() {
   const { data } = useQuery("products", () =>
     apiRequest("GET", "api/products")
   );
+  const { searchValue, setSearchValue } = useState("");
 
   return (
     <Page>
+      <div className="search">
+        <form action="">
+          <input
+            type="text"
+            value={searchValue}
+            onChange={(e) => setSearchValue(e.target)}
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {(data || []).map((item) => (
           <div className="col" key={item.id}>
