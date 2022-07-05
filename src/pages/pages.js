@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./pages.modules.css";
 
 export default function Page({ children }) {
   return (
