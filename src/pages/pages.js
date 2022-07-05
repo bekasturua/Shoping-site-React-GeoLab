@@ -32,7 +32,7 @@ export default function Page({ children }) {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/">
                     About Us
                   </a>
                 </li>
@@ -50,7 +50,7 @@ export default function Page({ children }) {
               </form>
             </div>
             <button type="button" className="btn btn-info">
-              <i class="fa-solid fa-cart-shopping"></i> Cart
+              <i className=""="fa-solid fa-cart-shopping"></i> Cart
             </button>
           </div>
         </nav>
@@ -59,17 +59,13 @@ export default function Page({ children }) {
       {children}
 
       <>
-        {/* Remove the container if you want to extend the Footer to full width. */}
         <div className="container my-5">
           <footer
             className="text-center text-white"
             style={{ backgroundColor: "#f1f1f1" }}
           >
-            {/* Grid container */}
-            <div className="container pt-4">
-              {/* Section: Social media */}
+            <div className="container pt-10">
               <section className="mb-4">
-                {/* Facebook */}
                 <a
                   className="btn btn-link btn-floating btn-lg text-dark m-1"
                   href="#!"
@@ -78,7 +74,6 @@ export default function Page({ children }) {
                 >
                   <i className="fab fa-facebook-f" />
                 </a>
-                {/* Twitter */}
                 <a
                   className="btn btn-link btn-floating btn-lg text-dark m-1"
                   href="#!"
@@ -87,7 +82,6 @@ export default function Page({ children }) {
                 >
                   <i className="fab fa-twitter" />
                 </a>
-                {/* Google */}
                 <a
                   className="btn btn-link btn-floating btn-lg text-dark m-1"
                   href="#!"
@@ -96,7 +90,6 @@ export default function Page({ children }) {
                 >
                   <i className="fab fa-google" />
                 </a>
-                {/* Instagram */}
                 <a
                   className="btn btn-link btn-floating btn-lg text-dark m-1"
                   href="#!"
@@ -105,7 +98,6 @@ export default function Page({ children }) {
                 >
                   <i className="fab fa-instagram" />
                 </a>
-                {/* Linkedin */}
                 <a
                   className="btn btn-link btn-floating btn-lg text-dark m-1"
                   href="#!"
@@ -114,7 +106,6 @@ export default function Page({ children }) {
                 >
                   <i className="fab fa-linkedin" />
                 </a>
-                {/* Github */}
                 <a
                   className="btn btn-link btn-floating btn-lg text-dark m-1"
                   href="#!"
@@ -124,23 +115,18 @@ export default function Page({ children }) {
                   <i className="fab fa-github" />
                 </a>
               </section>
-              {/* Section: Social media */}
             </div>
-            {/* Grid container */}
-            {/* Copyright */}
             <div
               className="text-center text-dark p-3"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
             >
               © 2020 Copyright:
-              <a className="text-dark" href="https://mdbootstrap.com/">
-                MDBootstrap.com
+              <a className="text-dark" href="/">
+                shopping
               </a>
             </div>
-            {/* Copyright */}
           </footer>
         </div>
-        {/* End of .container */}
       </>
     </>
   );
