@@ -1,7 +1,7 @@
 /* Footer */
 
 #key-features {
-    background: #18588b;
+    background: #4b2b8b;
     margin-top: 5rem;
     padding: 1rem;
 }
@@ -18,7 +18,7 @@
 }
 
 .section-soc_network:hover {
-    color: rgb(151, 149, 149);
+    color: rgb(149, 149, 151);
 }
 
 .key-feature__list {

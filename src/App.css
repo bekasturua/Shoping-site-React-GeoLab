@@ -39,12 +39,18 @@
 
 body {
   margin: 5px;
+  background-color: rgb(226, 226, 226);
 }
 
 .card {
   margin: 5px;
+  background-color: white;
   width: auto;
   height: auto;
+}
+
+.card:hover {
+  background-color: rgb(200, 200, 200);
 }
 
 .card-home {
@@ -57,4 +63,6 @@ body {
   width: 200px;
 }
 
-/*  */
+.col {
+  margin-top: 40px;
+}
