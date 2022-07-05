@@ -23,11 +23,7 @@ export default function Page({ children }) {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link
-                    to="/product"
-                    className="nav-link active"
-                    aria-current="page"
-                  >
+                  <Link to="/" className="nav-link active" aria-current="page">
                     Products
                   </Link>
                 </li>
@@ -58,76 +54,33 @@ export default function Page({ children }) {
 
       {children}
 
-      <>
-        <div className="container my-5">
-          <footer
-            className="text-center text-white"
-            style={{ backgroundColor: "#f1f1f1" }}
-          >
-            <div className="container pt-10">
-              <section className="mb-4">
-                <a
-                  className="btn btn-link btn-floating btn-lg text-dark m-1"
-                  href="#!"
-                  role="button"
-                  data-mdb-ripple-color="dark"
-                >
-                  <i className="fab fa-facebook-f" />
-                </a>
-                <a
-                  className="btn btn-link btn-floating btn-lg text-dark m-1"
-                  href="#!"
-                  role="button"
-                  data-mdb-ripple-color="dark"
-                >
-                  <i className="fab fa-twitter" />
-                </a>
-                <a
-                  className="btn btn-link btn-floating btn-lg text-dark m-1"
-                  href="#!"
-                  role="button"
-                  data-mdb-ripple-color="dark"
-                >
-                  <i className="fab fa-google" />
-                </a>
-                <a
-                  className="btn btn-link btn-floating btn-lg text-dark m-1"
-                  href="#!"
-                  role="button"
-                  data-mdb-ripple-color="dark"
-                >
-                  <i className="fab fa-instagram" />
-                </a>
-                <a
-                  className="btn btn-link btn-floating btn-lg text-dark m-1"
-                  href="#!"
-                  role="button"
-                  data-mdb-ripple-color="dark"
-                >
-                  <i className="fab fa-linkedin" />
-                </a>
-                <a
-                  className="btn btn-link btn-floating btn-lg text-dark m-1"
-                  href="#!"
-                  role="button"
-                  data-mdb-ripple-color="dark"
-                >
-                  <i className="fab fa-github" />
-                </a>
-              </section>
-            </div>
-            <div
-              className="text-center text-dark p-3"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-            >
-              © 2020 Copyright:
-              <a className="text-dark" href="/">
-                shopping
+      <section id="key-features">
+        <div>
+          <ul className="key-feature__list">
+            <li className="key-feature">
+              <a className="section-soc_network" href="/">
+                <i class="fa-brands fa-facebook"></i> Facebook
               </a>
-            </div>
-          </footer>
+            </li>
+            <li className="key-feature">
+              <a className="section-soc_network" href="/">
+                <i class="fa-brands fa-instagram"></i> Instagram
+              </a>
+            </li>
+            <li className="key-feature">
+              <a className="section-soc_network" href="/">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </li>
+          </ul>
         </div>
-      </>
+        <div className="contact">
+          <ul>
+            <h5 className="footer-link">Number: +995 598 93 03 80</h5>
+            <h5 className="footer-link">Mail: beqasturua3@gmail.com</h5>
+          </ul>
+        </div>
+      </section>
     </>
   );
 }
