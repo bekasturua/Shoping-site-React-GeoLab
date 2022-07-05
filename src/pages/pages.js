@@ -49,7 +49,7 @@ export default function Page({ children }) {
                 </button>
               </form>
             </div>
-            <button type="button" class="btn btn-info">
+            <button type="button" className="btn btn-info">
               Info
             </button>
           </div>

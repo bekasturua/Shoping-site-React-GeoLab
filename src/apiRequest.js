@@ -10,5 +10,5 @@ export default function apiRequest(method, endpoint, data, headers = {}) {
     method,
     data,
     headers: { ...defaultHeaders, ...headers },
-  }).then((response) => response.data.data);
+  }).then((response) => response.data);
 }
