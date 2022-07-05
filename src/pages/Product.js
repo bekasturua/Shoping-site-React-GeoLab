@@ -1,22 +1,28 @@
 import Page from "./pages";
-import productImg from "../img/product1.jpg";
 import { useParams } from "react-router-dom";
+import { useQuery } from "react-query";
+import apiRequest from "../apiRequest";
 
 export default function Product() {
   const params = useParams();
+  const { productId } = params;
+  const { data, isLoading } = useQuery(["product", productId], () =>
+    apiRequest("GET", `api/products/${productId}`)
+  );
 
-  console.log(params);
-
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   return (
     <Page>
       <div className="card-home">
         <div className="card">
-          <img src={productImg} className="card-img-top" alt="..." />
+          <img src={data.image} className="card-img-top" alt="..." />
           <div className="card-body">
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
+            <h5 className="card-title">{data.title}</h5>
+            <p className="card-text">{data.description}</p>
+            <p className="card-text">${data.price}</p>
+            <button>Add to cart</button>
           </div>
         </div>
       </div>
