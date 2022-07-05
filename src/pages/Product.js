@@ -1,7 +1,12 @@
 import Page from "./pages";
 import productImg from "../img/product1.jpg";
+import { useParams } from "react-router-dom";
 
 export default function Product() {
+  const params = useParams();
+
+  console.log(params);
+
   return (
     <Page>
       <div className="card-home">
