@@ -1,7 +1,7 @@
 import Page from "./pages";
 import { useQuery } from "react-query";
 import apiRequest from "../apiRequest";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 
 export default function Home() {
@@ -9,11 +9,17 @@ export default function Home() {
     apiRequest("GET", "api/products")
   );
   const { searchValue, setSearchValue } = useState("");
+  let [searchParams, setSearhParams] = useSearchParams();
+  function onSearchSubmit(e) {
+    e.preventDefault();
+
+    setSearhParams({ search: searchValue });
+  }
 
   return (
     <Page>
       <div className="search">
-        <form action="">
+        <form action="" onSubmit={onSearchSubmit}>
           <input
             type="text"
             value={searchValue}
