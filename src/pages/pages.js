@@ -54,17 +54,17 @@ export default function Page({ children }) {
           <ul className="key-feature__list">
             <li className="key-feature">
               <a className="section-soc_network" href="/">
-                <i class="fa-brands fa-facebook"></i> Facebook
+                <i className="fa-brands fa-facebook"></i> Facebook
               </a>
             </li>
             <li className="key-feature">
               <a className="section-soc_network" href="/">
-                <i class="fa-brands fa-instagram"></i> Instagram
+                <i className="fa-brands fa-instagram"></i> Instagram
               </a>
             </li>
             <li className="key-feature">
               <a className="section-soc_network" href="/">
-                <i class="fa-brands fa-github"></i> GitHub
+                <i className="fa-brands fa-github"></i> GitHub
               </a>
             </li>
           </ul>
