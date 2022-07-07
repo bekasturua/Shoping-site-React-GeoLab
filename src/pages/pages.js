@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./pages.modules.css";
 
 export default function Page({ children }) {
@@ -18,41 +18,38 @@ export default function Page({ children }) {
             >
               <span className="navbar-toggler-icon" />
             </button>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "navbar-brand active" : "navbar-brand"
+              }
+              href="/"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/prod"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+              href="/"
+            >
+              Products
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+              href="/"
+            >
+              About Us
+            </NavLink>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      isActive ? "navbar-brand active" : "navbar-brand"
-                    }
-                    href="/"
-                  >
-                    Home
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink
-                    to="/prod"
-                    className={({ isActive }) =>
-                      isActive ? "nav-link active" : "nav-link"
-                    }
-                    href="/"
-                  >
-                    Products
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink
-                    to="/about"
-                    className={({ isActive }) =>
-                      isActive ? "nav-link active" : "nav-link"
-                    }
-                    href="/"
-                  >
-                    About Us
-                  </NavLink>
-                </li>
+                <li className="nav-item"></li>
+                <li className="nav-item"></li>
+                <li className="nav-item"></li>
               </ul>
             </div>
             <button type="button" className="btn btn-info">
