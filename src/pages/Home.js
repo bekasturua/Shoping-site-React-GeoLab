@@ -8,7 +8,12 @@ export default function Home() {
   let [searchParams, setSearchParams] = useSearchParams();
 
   const { data } = useQuery(["products", searchParams.get("search")], () =>
-  apiRequest("GET", `api/products${searchParams.get("search") ? `?q=${searchParams.get("search")}` : ""}`)
+    apiRequest(
+      "GET",
+      `api/products${
+        searchParams.get("search") ? `?q=${searchParams.get("search")}` : ""
+      }`
+    )
   );
   const [searchValue, setSearchValue] = useState("");
 
