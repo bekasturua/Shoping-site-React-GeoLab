@@ -1,19 +1,24 @@
-import Page from "./pages";
+import Page from "../pages/pages";
 import { useQuery } from "react-query";
 import apiRequest from "../apiRequest";
 import { Link, useSearchParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const { data } = useQuery("products", () =>
-    apiRequest("GET", "api/products")
+  let [searchParams, setSearchParams] = useSearchParams();
+
+  const { data } = useQuery(["products", searchParams.get("search")], () =>
+  apiRequest("GET", `api/products${searchParams.get("search") ? `?q=${searchParams.get("search")}` : ""}`)
   );
-  const { searchValue, setSearchValue } = useState("");
-  let [searchParams, setSearhParams] = useSearchParams();
+  const [searchValue, setSearchValue] = useState("");
+
+  useEffect(() => {
+    setSearchValue(searchParams.get("search"));
+  }, []);
+
   function onSearchSubmit(e) {
     e.preventDefault();
-
-    setSearhParams({ search: searchValue });
+    setSearchParams({ search: searchValue });
   }
 
   return (
@@ -23,7 +28,7 @@ export default function Home() {
           <input
             type="text"
             value={searchValue}
-            onChange={(e) => setSearchValue(e.target)}
+            onChange={(e) => setSearchValue(e.target.value)}
           />
           <button type="submit">Search</button>
         </form>
