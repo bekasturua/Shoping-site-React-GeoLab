@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
+import About from "./pages/about";
+import Prod from "./pages/prod";
 
 const queryClient = new QueryClient();
 
@@ -13,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:productId" element={<Product />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/prod" element={<Prod />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

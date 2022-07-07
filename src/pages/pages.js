@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./pages.modules.css";
 
 export default function Page({ children }) {
@@ -18,27 +18,42 @@ export default function Page({ children }) {
             >
               <span className="navbar-toggler-icon" />
             </button>
-            <Link to="/" className="navbar-brand" href="#">
-              Home
-            </Link>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link to="/" className="nav-link active" aria-current="page">
-                    Products
-                  </Link>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive ? "navbar-brand active" : "navbar-brand"
+                    }
+                    href="/"
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <NavLink
+                    to="/prod"
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                    href="/"
+                  >
+                    Products
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                    href="/"
+                  >
                     About Us
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
-              <form className="d-flex" role="search">
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
             </div>
             <button type="button" className="btn btn-info">
               <i className="fa-solid fa-cart-shopping"></i> Cart

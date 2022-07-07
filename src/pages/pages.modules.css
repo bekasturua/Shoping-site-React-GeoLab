@@ -54,3 +54,8 @@
     justify-content: center;
     margin: 18px;
 }
+
+.active {
+    color: black;
+    font-weight: bold;
+}
