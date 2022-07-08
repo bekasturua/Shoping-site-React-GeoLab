@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Product from "./pages/Product";
 import About from "./pages/about";
 import Prod from "./pages/prod";
+import "./i18n";
 
 const queryClient = new QueryClient();
 

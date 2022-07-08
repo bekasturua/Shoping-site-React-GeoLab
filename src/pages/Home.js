@@ -9,7 +9,7 @@ export default function Home() {
 
   const { data } = useQuery(["products", searchParams.get("search")], () =>
     apiRequest(
-      "GET",
+      "GET", 
       `api/products${
         searchParams.get("search") ? `?q=${searchParams.get("search")}` : ""
       }`

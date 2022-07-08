@@ -1,7 +1,11 @@
+import { useTransition } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./pages.modules.css";
+import { useTranslation } from "react-i18next";
 
 export default function Page({ children }) {
+  const { t, i18n } = useTranslation();
+
   return (
     <>
       <div>
@@ -24,8 +28,10 @@ export default function Page({ children }) {
                 isActive ? "navbar-brand active" : "navbar-brand"
               }
               href="/"
+              aria-current="page"
             >
-              Home
+              {t("home")}
+              {/* Home */}
             </NavLink>
             <NavLink
               to="/prod"
@@ -34,7 +40,8 @@ export default function Page({ children }) {
               }
               href="/"
             >
-              Products
+              {t("products")}
+              {/* Products */}
             </NavLink>
             <NavLink
               to="/about"
@@ -43,18 +50,19 @@ export default function Page({ children }) {
               }
               href="/"
             >
-              About Us
+              {t("about_us")}
+              {/* About Us */}
             </NavLink>
-            <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item"></li>
-                <li className="nav-item"></li>
-                <li className="nav-item"></li>
-              </ul>
+
+            <div>
+              <button onClick={() => i18n.changeLanguage("ka")}>{t("ka")}</button>
+              <button onClick={() => i18n.changeLanguage("en")}>{t("en")}</button>
             </div>
-            <button type="button" className="btn btn-info">
-              <i className="fa-solid fa-cart-shopping"></i> Cart
-            </button>
+            <div>
+              <button type="button" className="btn btn-info">
+                <i className="fa-solid fa-cart-shopping"></i> {t("cart")}
+              </button>
+            </div>
           </div>
         </nav>
       </div>
