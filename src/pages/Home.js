@@ -3,13 +3,15 @@ import { useQuery } from "react-query";
 import apiRequest from "../apiRequest";
 import { Link, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t, i18n } = useTranslation();
   let [searchParams, setSearchParams] = useSearchParams();
 
   const { data } = useQuery(["products", searchParams.get("search")], () =>
     apiRequest(
-      "GET", 
+      "GET",
       `api/products${
         searchParams.get("search") ? `?q=${searchParams.get("search")}` : ""
       }`
@@ -35,7 +37,7 @@ export default function Home() {
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
           />
-          <button type="submit">Search</button>
+          <button type="submit">{t("search")}</button>
         </form>
       </div>
 

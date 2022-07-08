@@ -1,4 +1,3 @@
-import { useTransition } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./pages.modules.css";
 import { useTranslation } from "react-i18next";
@@ -55,8 +54,12 @@ export default function Page({ children }) {
             </NavLink>
 
             <div>
-              <button onClick={() => i18n.changeLanguage("ka")}>{t("ka")}</button>
-              <button onClick={() => i18n.changeLanguage("en")}>{t("en")}</button>
+              <button onClick={() => i18n.changeLanguage("ka")}>
+                {t("ka")}
+              </button>
+              <button onClick={() => i18n.changeLanguage("en")}>
+                {t("en")}
+              </button>
             </div>
             <div>
               <button type="button" className="btn btn-info">
@@ -91,8 +94,8 @@ export default function Page({ children }) {
         </div>
         <div className="contact">
           <ul>
-            <h5 className="footer-link">Number: +995 598 93 03 80</h5>
-            <h5 className="footer-link">Mail: beqasturua3@gmail.com</h5>
+            <h5 className="footer-link">{t("number")}: +995 598 93 03 80</h5>
+            <h5 className="footer-link">{t("mail")}: beqasturua3@gmail.com</h5>
           </ul>
         </div>
       </section>

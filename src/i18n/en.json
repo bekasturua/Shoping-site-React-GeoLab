@@ -3,6 +3,9 @@
   "home": "Home",
   "about_us": "About Us",
   "cart": "Cart",
-  "en": "Eng",
-  "ka": "Geo"
+  "en": "English",
+  "ka": "Georgian",
+  "search": "Search",
+  "mail": "Mail",
+  "number": "Number"
 }
