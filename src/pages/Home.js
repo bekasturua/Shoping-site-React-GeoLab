@@ -54,7 +54,7 @@ export default function Home() {
                 </Link>
                 <p className="card-text">${item.price}</p>
                 <button type="button" className="btn btn-success">
-                  <i className="fa-solid fa-cart-arrow-down"></i> Add To Cart
+                  <i className="fa-solid fa-cart-arrow-down"></i> {t("addToCart")}
                 </button>
               </div>
             </div>

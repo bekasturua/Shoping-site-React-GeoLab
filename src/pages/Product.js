@@ -2,8 +2,11 @@ import Page from "./pages";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import apiRequest from "../apiRequest";
+import { useTranslation } from "react-i18next";
 
 export default function Product() {
+  const { t, i18n } = useTranslation();
+
   const params = useParams();
   const { productId } = params;
   const { data, isLoading } = useQuery(["product", productId], () =>
@@ -11,7 +14,7 @@ export default function Product() {
   );
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>{t("loading")}</div>;
   }
   return (
     <Page>
@@ -23,7 +26,7 @@ export default function Product() {
             <p className="card-text">{data.description}</p>
             <p className="card-text">${data.price}</p>
             <button type="button" className="btn btn-success">
-              <i className="fa-solid fa-cart-arrow-down"></i> Add To Cart
+              <i className="fa-solid fa-cart-arrow-down"></i> {t("addToCart")}
             </button>
           </div>
         </div>
