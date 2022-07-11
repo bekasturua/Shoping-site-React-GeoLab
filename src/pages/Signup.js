@@ -3,6 +3,18 @@ import { useFormik } from "formik";
 import Page from "./pages";
 import apiRequest from "../apiRequest";
 
+const validate = (values, props) => {
+  const errors = {};
+
+  if (!values.email) {
+    errors.email = "Required";
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = "Invalid email address";
+  }
+
+  return errors;
+};
+
 const Signup = () => {
   const formik = useFormik({
     initialValues: {
@@ -10,7 +22,9 @@ const Signup = () => {
       lastName: "",
       email: "",
     },
+    validate,
     onSubmit: (values) => {
+      //   apiRequest("POST", "signup", values);
       alert(JSON.stringify(values, null, 2));
     },
   });
@@ -46,6 +60,9 @@ const Signup = () => {
             onChange={formik.handleChange}
             value={formik.values.email}
           />
+          {formik.errors.email && (
+            <div style={{ color: "red" }}>{formik.errors.email}</div>
+          )}
         </div>
         <button type="submit">Submit</button>
       </form>
