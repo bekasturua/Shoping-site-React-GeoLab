@@ -6,6 +6,17 @@ import apiRequest from "../apiRequest";
 const validate = (values, props) => {
   const errors = {};
 
+  if (!values.firstName) {
+    errors.firstName = "First name is required";
+  } else if (values.firstName.length < 2) {
+    errors.firstName = "First name is required";
+  }
+  if (!values.lastName) {
+    errors.lastName = "Last name is required";
+  } else if (values.lastName.length < 2) {
+    errors.lastName = "Last name is required";
+  }
+
   if (!values.email) {
     errors.email = "Required";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -40,6 +51,9 @@ const Signup = () => {
             onChange={formik.handleChange}
             value={formik.values.firstName}
           />
+          {formik.errors.firstName && (
+            <div style={{ color: "red" }}>{formik.errors.firstName}</div>
+          )}
         </div>
         <div>
           <label htmlFor="lastName">Last Name</label>
@@ -50,6 +64,9 @@ const Signup = () => {
             onChange={formik.handleChange}
             value={formik.values.lastName}
           />
+          {formik.errors.lastName && (
+            <div style={{ color: "red" }}>{formik.errors.lastName}</div>
+          )}
         </div>
         <div>
           <label htmlFor="email">Email Address</label>
