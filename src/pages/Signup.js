@@ -2,6 +2,8 @@ import React from "react";
 import { useFormik } from "formik";
 import Page from "./pages";
 import apiRequest from "../apiRequest";
+import { useTranslation } from "react-i18next";
+import { t } from "i18next";
 
 const validate = (values, props) => {
   const errors = {};
@@ -27,6 +29,8 @@ const validate = (values, props) => {
 };
 
 const Signup = () => {
+  const { t, i18n } = useTranslation();
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -43,7 +47,7 @@ const Signup = () => {
     <Page>
       <form onSubmit={formik.handleSubmit}>
         <div>
-          <label htmlFor="firstName">First Name</label>
+          <label htmlFor="firstName">{t("firstName")}</label>
           <input
             id="firstName"
             name="firstName"
@@ -56,7 +60,7 @@ const Signup = () => {
           )}
         </div>
         <div>
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor="lastName">{t("lastName")}</label>
           <input
             id="lastName"
             name="lastName"
@@ -69,7 +73,7 @@ const Signup = () => {
           )}
         </div>
         <div>
-          <label htmlFor="email">Email Address</label>
+          <label htmlFor="email">{t("mail")}</label>
           <input
             id="email"
             name="email"
@@ -81,7 +85,7 @@ const Signup = () => {
             <div style={{ color: "red" }}>{formik.errors.email}</div>
           )}
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">{t("submit")}</button>
       </form>
     </Page>
   );

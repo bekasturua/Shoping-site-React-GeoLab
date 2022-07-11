@@ -9,5 +9,8 @@
   "mail": "Mail",
   "number": "Number",
   "addToCart": "+ Add To Cart",
-  "loading": "Loading..."
+  "loading": "Loading...",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "submit": "Submit"
 }
