@@ -6,6 +6,7 @@ import Product from "./pages/Product";
 import About from "./pages/about";
 import Prod from "./pages/prod";
 import "./i18n";
+import Signup from "./pages/Signup";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/about" element={<About />} />
           <Route path="/prod" element={<Prod />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
