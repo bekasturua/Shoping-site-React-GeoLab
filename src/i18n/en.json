@@ -12,5 +12,6 @@
   "loading": "Loading...",
   "firstName": "First Name",
   "lastName": "Last Name",
-  "submit": "Submit"
+  "submit": "Submit",
+  "signup": "Login"
 }

@@ -52,6 +52,16 @@ export default function Page({ children }) {
               {t("about_us")}
               {/* About Us */}
             </NavLink>
+            <NavLink
+              to="/signup"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+              href="/"
+            >
+              {t("signup")}
+              {/* About Us */}
+            </NavLink>
 
             <div>
               <button onClick={() => i18n.changeLanguage("ka")}>

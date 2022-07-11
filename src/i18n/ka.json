@@ -12,7 +12,9 @@
   "loading": "იტვირთება...",
   "firstName": "სახელი",
   "lastName": "გვარი",
-  "submit": "შესვლა"
+  "submit": "შესვლა",
+  "signup": "ლოგინი"
+
 
 
 }
