@@ -41,7 +41,7 @@ export default function Home() {
         </form>
       </div>
 
-      <div className="row row-cols-1 row-cols-md-3 g-4">
+      <div className="row row-cols-1 row-cols-md-4 g-4">
         {(data || []).map((item) => (
           <div className="col" key={item.id}>
             <div className="card h-100">
@@ -54,7 +54,8 @@ export default function Home() {
                 </Link>
                 <p className="card-text">${item.price}</p>
                 <button type="button" className="btn btn-success">
-                  <i className="fa-solid fa-cart-arrow-down"></i> {t("addToCart")}
+                  <i className="fa-solid fa-cart-arrow-down"></i>{" "}
+                  {t("addToCart")}
                 </button>
               </div>
             </div>
